@@ -10,9 +10,17 @@ body {
 #greeting {
   font-size: 96px;
   color: red;
-  margin: 240px;
+  margin-top: 180px;
   text-align: center;
   letter-spacing: 2px;
-  font-weight: bold;
   font-family: 'Caveat Brush', serif;
+}
+
+.advise {
+	color: yellow;
+	font-size: 46px;
+	text-align: center;
+	letter-spacing: 2px;
+	font-family: 'Caveat Brush', serif;
+
 }
