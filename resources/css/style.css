@@ -1,3 +1,18 @@
 *, *:before, *:after {
   box-sizing:border-box;
 }
+
+body {
+	background: black;
+}
+
+
+#greeting {
+  font-size: 96px;
+  color: red;
+  margin: 240px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Caveat Brush', serif;
+}
