@@ -6,7 +6,6 @@ body {
 	background: black;
 }
 
-
 #greeting {
   font-size: 96px;
   color: red;
@@ -24,3 +23,12 @@ body {
 	font-family: 'Caveat Brush', serif;
 
 }
+
+#button {
+  border-radius: 20px;
+  margin-left: 26%;
+  margin-top: 2%;
+  cursor: pointer;
+  background-color: red;
+}
+

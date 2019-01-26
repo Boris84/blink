@@ -9,4 +9,25 @@ function blink() {
   }
 }
 
-   window.setInterval(blink, 500);
+ // window.setInterval(blink, 500);
+
+
+
+
+
+let myText = document.querySelector('body');
+
+
+function userText(event) {
+  if (event && myText.style.background === "black") {  
+  myText.style.background = "white";
+  }
+  else {
+  myText.style.background = "black";
+  }
+}
+document.addEventListener('click', userText);
+
+
+   
+
