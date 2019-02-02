@@ -3,25 +3,33 @@
 }
 
 body {
-	background: black;
+	background: gray;
 }
 
 #greeting {
   font-size: 96px;
-  color: red;
-  margin-top: 180px;
+  color: yellow;
+  margin-top: 20px;
   text-align: center;
   letter-spacing: 2px;
-  font-family: 'Caveat Brush', serif;
+  font-family: 'ZCOOL KuaiLe', serif;
 }
 
-.advise {
-	color: yellow;
+#advise {
+	color: blue;
 	font-size: 46px;
 	text-align: center;
 	letter-spacing: 2px;
-	font-family: 'Caveat Brush', serif;
+}
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
+canvas {
+  background: black;
+  border: solid 5px #fff;
 }
 
 #button {
@@ -29,6 +37,6 @@ body {
   margin-left: 26%;
   margin-top: 2%;
   cursor: pointer;
-  background-color: red;
+  background-color: blue;
 }
 
