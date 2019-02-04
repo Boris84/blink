@@ -12,7 +12,8 @@ body {
   margin-top: 20px;
   text-align: center;
   letter-spacing: 2px;
-  font-family: 'ZCOOL KuaiLe', serif;
+  font-weight: bold;
+  font-family: 'consolas', serif;
 }
 
 #advise {
