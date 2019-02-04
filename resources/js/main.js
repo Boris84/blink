@@ -61,9 +61,9 @@ let mySwitch = window.setInterval(colorSwitch, 700);
 
 // stop canvas background-color switch 
 
-function myStop() {
+function myStop(event) {
 
-  if (colorSwitch) {
+  if (event) {
     clearInterval(mySwitch);
   }
 }
@@ -73,18 +73,14 @@ document.addEventListener('click', myStop);
 
 
 
-document.addEventListener('click', myPlay);
 
 function myPlay(event) {
-
-  if (colorSwitch) {
-    colorSwitch();
-   
+  if (event) {
+    colorSwitch(); 
   }
-  window.setInterval(colorSwitch, 700);
 }
 
-document.addEventListener('click', myStop);
+document.addEventListener('click', myPlay);
 
 
 
