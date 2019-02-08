@@ -22,8 +22,8 @@ body {
 }
 
 canvas {
-  width: 70%;
-  height: 50%;
+  width: 60%;
+  height: 40%;
   background: black;
   border: solid 5px #fff;
 }

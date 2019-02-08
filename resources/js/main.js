@@ -46,10 +46,12 @@ function colorSwitch() {
   let can = document.querySelector('canvas');
 
   if (can.style.background === "black") { 
-       can.style.background = "gray";
+       can.style.background = "white";
+       can.style.borderColor = "gray";
   }
   else {
     can.style.background = "black";
+    can.style.borderColor = "white";
   }
 }
 let mySwitch = window.setInterval(colorSwitch, 700);
