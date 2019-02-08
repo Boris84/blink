@@ -24,10 +24,10 @@ let myText = document.getElementById('greeting');
 
 function userText(event) {
   if (myPage.style.background === "gray") {
-    myText.style.color = "blue";
+    myText.style.color = "black";
   }
   else {
-    myText.style.color = "yellow";
+    myText.style.color = "white";
   }
 }
 window.setInterval(userText, 700);

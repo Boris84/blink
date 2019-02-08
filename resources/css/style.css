@@ -15,7 +15,7 @@ body {
 #greeting {
   width: 100%;
   font-size: 36px;
-  color: yellow;
+  color: #fff;
   letter-spacing: 2px;
   font-weight: bold;
   font-family: 'consolas', serif;
