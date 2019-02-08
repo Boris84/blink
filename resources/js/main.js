@@ -1,6 +1,6 @@
 
 
-
+var pause = 0;
 
 
 // background of page 
@@ -30,8 +30,7 @@ function userText(event) {
     myText.style.color = "yellow";
   }
 }
-document.addEventListener('click', userText);
-
+window.setInterval(userText, 700);
 
 
 
@@ -52,7 +51,6 @@ function colorSwitch() {
   else {
     can.style.background = "black";
   }
-  
 }
 let mySwitch = window.setInterval(colorSwitch, 700);
 
@@ -75,12 +73,12 @@ document.addEventListener('click', myStop);
 
 
 function myPlay(event) {
+ 
   if (event) {
-    colorSwitch(); 
+   colorSwitch = true;
   }
 }
-
-document.addEventListener('click', myPlay);
+document.addEventListener('keypress', myPlay);
 
 
 
