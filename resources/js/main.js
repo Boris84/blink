@@ -1,9 +1,6 @@
 
 
-var pause = 0;
-
-
-// background of page 
+// background of page //
 let myPage = document.querySelector('body');
 
 function userPage(event) {
@@ -19,7 +16,11 @@ window.setInterval(userPage, 700);
 
 
 
-// referencing myPage background so text color do not clash 
+
+
+
+
+// referencing myPage background so text color do not clash //
 let myText = document.getElementById('greeting');
 
 function userText(event) {
@@ -37,66 +38,75 @@ window.setInterval(userText, 700);
 
 
 
-// canvas background-color switch 
 
-
-
-function colorSwitch() {
-
-  let can = document.querySelector('canvas');
-
-  if (can.style.background === "black") { 
-    can.style.background = "white";
-    can.style.borderColor = "gray";
-  }
-  else {
-    can.style.background = "black";
-    can.style.borderColor = "white";
-  }
-}
-let mySwitch = window.setInterval(colorSwitch, 700);
-
-
-
-
-// stop canvas background-color switch 
-
-function myStop(event) {
-
-  if (event) {
-    clearInterval(mySwitch);
-  }
-}
-document.addEventListener('click', myStop);
-
-
-
-
-
-
-function myPlay(event) {
- 
-  if (event) {
-   colorSwitch = true;
-  }
-}
-document.addEventListener('keypress', myPlay);
-
-
-
-
-
+// canvas Specs //
 const canvas = document.querySelector('canvas');
 canvas.width = 1300;        
 canvas.height = 900;
 const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'yellow';
+
 
 let player_x = 20;
 let player_y = 20;
+let base_x = Math.floor(Math.random() * 1250);
+let base_y = Math.floor(Math.random() * 850);
 
 
-ctx.fillRect(player_x, player_y, 20, 20);
 
 
 
+
+
+// start square game // 
+document.getElementById('button').onclick = function step() {
+  
+  function step() {
+    ctx.clearRect(0, 0, 1300, 950);
+    ctx.fillStyle = 'yellow';
+    player_x +=3;
+    ctx.fillRect(player_x, player_y, 30, 30);
+    myFrame = requestAnimationFrame(step)
+    
+    }
+  requestAnimationFrame(step);
+}
+
+
+
+
+
+
+// directional keys for game //
+function handleInput(event) {
+  const key = event.key;
+  
+  if (key === 'a') {
+      player_x -= 15;
+  }
+  else if (key === "w") {
+      player_y -= 15; 
+  }
+  else if (key === "d") {
+      player_x += 15;
+  }
+  else if (key === "s") {
+      player_y += 15;
+  }
+}
+
+document.addEventListener('keypress', handleInput);
+
+
+
+
+
+
+// pause square game //
+function stopMe(event) {
+  const key = event.key;
+
+  if (key === 'g') {
+    cancelAnimationFrame(myFrame);
+  }
+}
+document.addEventListener('keypress', stopMe)
