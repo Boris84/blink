@@ -46,10 +46,8 @@ canvas.height = 900;
 const ctx = canvas.getContext('2d');
 
 
-let player_x = 20;
-let player_y = 20;
-let base_x = Math.floor(Math.random() * 1250);
-let base_y = Math.floor(Math.random() * 850);
+let player_x = 0;
+let player_y = 50;
 
 
 
@@ -66,12 +64,16 @@ document.getElementById('button').onclick = function step() {
     player_x +=3;
     ctx.fillRect(player_x, player_y, 30, 30);
     myFrame = requestAnimationFrame(step)
-    
+
+  if (player_x >= 1300) {
+    player_x = 0;
+    ctx.clearRect(0, 0, 1300, 950);
+    ctx.fillStyle = 'yellow';
+    ctx.fillRect(player_x, player_y, 30, 30);
     }
+  }
   requestAnimationFrame(step);
 }
-
-
 
 
 
@@ -93,7 +95,6 @@ function handleInput(event) {
       player_y += 15;
   }
 }
-
 document.addEventListener('keypress', handleInput);
 
 
